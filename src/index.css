@@ -16,3 +16,33 @@ code {
 :root{
   --navy-blue: #2a4970;
   }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    padding-left: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #E5E0EB; 
+    border-radius: 10px;
+    margin-left: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #adaab0; 
+  }
+  .scroller {
+    overflow-y: scroll;
+    scrollbar-color: #0A4C95 #C2D2E4;
+  }
+  :root{
+    scrollbar-color: #E5E0EB #0A4C95 !important;
+    scrollbar-width: thin !important;
+  }

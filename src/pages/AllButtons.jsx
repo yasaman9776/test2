@@ -34,7 +34,7 @@ const AllButtons = ({props}) => {
                 }}>
                     Large Button
                 </span>
-                <LargeButton >
+                <LargeButton color="primary" >
                     کلیک کنید !
                 </LargeButton>
             </div>

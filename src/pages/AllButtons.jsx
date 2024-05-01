@@ -1,10 +1,9 @@
 import {
-    DefaultButton,
-    ExtendedButton,
-    LargeButton,
-    MediumButton,
-    SmallButton,
-    IconButton
+
+    MainLargeButton,
+    MainMediumButton,
+    MainSmallButton,
+    MainIconButton
 } from "../components/Button";
 
 import SaveIcon from "../assets/icon/SaveIcon";
@@ -34,9 +33,27 @@ const AllButtons = ({props}) => {
                 }}>
                     Large Button
                 </span>
-                <LargeButton color="primary" >
+                <MainLargeButton >
                     کلیک کنید !
-                </LargeButton>
+                </MainLargeButton>
+            </div>
+            <div
+                style={{
+                display: 'flex',
+                flexDirection: 'column',
+                margin: "10px 50px"
+            }}>
+                <span
+                    style={{
+                    fontFamily: 'IRANYekanBold',
+                    color: "#000",
+                    marginBottom: 10
+                }}>
+                    Secondary Button
+                </span>
+                <MainLargeButton backgroundColor={"secondary"} textColor={"secondary"} borderColor={"secondary"}>
+                    کلیک کنید !
+                </MainLargeButton>
             </div>
             <div
                 style={{
@@ -52,9 +69,9 @@ const AllButtons = ({props}) => {
                 }}>
                     Medium Button
                 </span>
-                <MediumButton>
+                <MainMediumButton>
                     کلیک کنید !
-                </MediumButton>
+                </MainMediumButton>
             </div>
             <div
                 style={{
@@ -70,9 +87,9 @@ const AllButtons = ({props}) => {
                 }}>
                     Small Button
                 </span>
-                <SmallButton>
+                <MainSmallButton>
                     کلیک کنید !
-                </SmallButton>
+                </MainSmallButton>
             </div>
         </div>
         <div
@@ -94,7 +111,7 @@ const AllButtons = ({props}) => {
                 }}>
                     Large Button
                 </span>
-                <IconButton>
+                <MainIconButton>
                     کلیک کنید !
                     <SaveIcon
                         height={15}
@@ -104,7 +121,7 @@ const AllButtons = ({props}) => {
                         marginLeft: 10
                     }}/>
 
-                </IconButton>
+                </MainIconButton>
             </div>
             <div
                 style={{
@@ -120,9 +137,16 @@ const AllButtons = ({props}) => {
                 }}>
                     Medium Button
                 </span>
-                <MediumButton>
+                <MainMediumButton>
                     کلیک کنید !
-                </MediumButton>
+                    <SaveIcon
+                        height={15}
+                        width={15}
+                        color={'#fff'}
+                        style={{
+                        marginLeft: 10
+                    }}/>
+                </MainMediumButton>
             </div>
             <div
                 style={{
@@ -138,9 +162,78 @@ const AllButtons = ({props}) => {
                 }}>
                     Small Button
                 </span>
-                <SmallButton>
+                <MainSmallButton>
                     کلیک کنید !
-                </SmallButton>
+                    <SaveIcon
+                        height={15}
+                        width={15}
+                        color={'#fff'}
+                        style={{
+                        marginLeft: 10
+                    }}/>
+                </MainSmallButton>
+            </div>
+        </div>
+        <div
+            style={{
+            display: 'flex',
+            marginBottom: 50
+        }}>
+            <div
+                style={{
+                display: 'flex',
+                flexDirection: 'column',
+                margin: "10px 50px"
+            }}>
+                <span
+                    style={{
+                    fontFamily: 'IRANYekanBold',
+                    color: "#000",
+                    marginBottom: 10
+                }}>
+                    Danger Button
+                </span>
+                <MainLargeButton backgroundColor={"danger"}>
+                    کلیک کنید !
+                  
+
+                </MainLargeButton>
+            </div>
+            <div
+                style={{
+                display: 'flex',
+                flexDirection: 'column',
+                margin: "10px 50px"
+            }}>
+                <span
+                    style={{
+                    fontFamily: 'IRANYekanBold',
+                    color: "#000",
+                    marginBottom: 10
+                }}>
+                    Alert Button
+                </span>
+                <MainLargeButton backgroundColor={"alert"}>
+                    کلیک کنید !
+                </MainLargeButton>
+            </div>
+            <div
+                style={{
+                display: 'flex',
+                flexDirection: 'column',
+                margin: "10px 50px"
+            }}>
+                <span
+                    style={{
+                    fontFamily: 'IRANYekanBold',
+                    color: "#000",
+                    marginBottom: 10
+                }}>
+                    Accept Button
+                </span>
+                <MainLargeButton backgroundColor={"accept"}>
+                    کلیک کنید !
+                </MainLargeButton>
             </div>
         </div>
     </div> </>

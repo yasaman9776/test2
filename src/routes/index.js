@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import MainLayout from "../layout/MainLayout";
 import AllButtons from "../pages/AllButtons";
+import AllInputs from "../pages/AllInputs";
 export const router =createBrowserRouter([
     {
         path: "/",
@@ -18,6 +19,10 @@ export const router =createBrowserRouter([
                 path: "/allBtn",
                 element:  <AllButtons />,
             },
+            {
+                path:"/allInputs",
+                element: <AllInputs/>,
+            }
             
         ],
     },

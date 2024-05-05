@@ -3,6 +3,7 @@ import App from "../App";
 import MainLayout from "../layout/MainLayout";
 import AllButtons from "../pages/AllButtons";
 import AllInputs from "../pages/AllInputs";
+import AllTypographys from "../pages/AllTypographys";
 export const router =createBrowserRouter([
     {
         path: "/",
@@ -22,6 +23,10 @@ export const router =createBrowserRouter([
             {
                 path:"/allInputs",
                 element: <AllInputs/>,
+            },
+            {
+                path:"/allTypographys",
+                element: <AllTypographys/>,
             }
             
         ],

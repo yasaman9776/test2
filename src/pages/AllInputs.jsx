@@ -23,7 +23,7 @@ const AllInputs = ({props}) =>{
         <Label fontFamily={"IRANYekanBold"} textAlign={"right"}>
             نام و نام خانوادگی
         </Label>
-        <DefaultInput   boxShadow ={"0px 0px 2px #2A4270"} width={"255px"} dir={"rtl"} inputPadding={"15px"} placeholder="متن را وارد کنید" borderColor={`${CokatexColors.lightGray}`} />
+        <DefaultInput   boxShadow ={"0px 0px 2px #2A4270"} width={"255px"} dir={"rtl"} inputPadding={"10px"} placeholder="متن را وارد کنید" borderColor={`${CokatexColors.lightGray}`} />
    
         </div>
 
@@ -34,7 +34,7 @@ const AllInputs = ({props}) =>{
         <IconInput borderColor={`${CokatexColors.lightGray}`}>
             <DefaultInput borderColor={"transparent"} width={"200px"} dir={"rtl"}  type={
                         showPassword ? "text" : "password"
-                    }
+                    } inputPadding={"0px"}
                    boxShadow ={"none"}
                     />
             <MiniIcon onClick={()=>setShowPassword(!showPassword)} >

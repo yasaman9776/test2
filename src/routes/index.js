@@ -26,14 +26,14 @@ export const router =createBrowserRouter([
                 element: <AllInputs/>,
             },
             {
-<<<<<<< HEAD
                 path:"/allTypographys",
                 element: <AllTypographys/>,
-=======
+            },
+            {
                 path:"/allDropDown",
                 element: <AllDropDown/>,
->>>>>>> dfd65b664813506b585b7e561b36bb744c71c844
-            }
+
+            },
             
         ],
     },

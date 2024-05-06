@@ -110,4 +110,5 @@ export const NumberInput = styled.div `
     border-width:1px;
     padding:5px;
     width:${(props) =>props.width};
+
 `

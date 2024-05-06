@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {CokatexColors} from '../helper/colors';
+
 
 // const handleDeviceType = devicetype => {
 //     switch (devicetype) {

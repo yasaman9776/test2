@@ -3,6 +3,7 @@ import App from "../App";
 import MainLayout from "../layout/MainLayout";
 import AllButtons from "../pages/AllButtons";
 import AllInputs from "../pages/AllInputs";
+import AllTypographys from "../pages/AllTypographys";
 import AllDropDown from "../pages/AllDropDown";
 export const router =createBrowserRouter([
     {
@@ -25,9 +26,14 @@ export const router =createBrowserRouter([
                 element: <AllInputs/>,
             },
             {
+                path:"/allTypographys",
+                element: <AllTypographys/>,
+            },
+            {
                 path:"/allDropDown",
                 element: <AllDropDown/>,
-            }
+
+            },
             
         ],
     },

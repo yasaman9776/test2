@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
-import { DefaultSelect, DefaultOption } from "../components/Dropdown";
+import { DefaultSelect, DefaultOption } from "../components/DropDown";
 import { CokatexColors } from "../helper/colors";
 const AllDropDown = ({props}) =>{
     const [data, setData] = useState(undefined);

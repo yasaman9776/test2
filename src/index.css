@@ -46,3 +46,6 @@ code {
     scrollbar-color: #E5E0EB #0A4C95 !important;
     scrollbar-width: thin !important;
   }
+  .ul{
+    list-style-image: url('./assets/icon/b.svg');
+  }

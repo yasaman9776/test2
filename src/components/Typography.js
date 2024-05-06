@@ -75,7 +75,7 @@ const handleTextLevel = textLevel => {
         case "h4-14":
             return "font-size:14px; font-family:IRANYekanLight;" ;            
         default:
-            return "font-size:18px; font-family:IRANYekanNormal;" ;
+            return "font-size:16px; font-family:IRANYekanNormal;" ;
 
     }
 

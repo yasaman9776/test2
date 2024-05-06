@@ -49,6 +49,7 @@ const Navbar = () =>{
         </li>
         <li style={{marginRight:15,marginLeft:15,textDecoration:"none"}}>
                     <NavLink to={"/allTypographys"}
+                    
                        style={({isActive, isTransitioning}) => {
                         return {
                             fontWeight: isActive
@@ -64,6 +65,26 @@ const Navbar = () =>{
                         };
                     }}>
                         Typographys
+                        
+                    </NavLink>
+        </li>
+        <li style={{marginRight:15,marginLeft:15,textDecoration:"none"}}>
+                    <NavLink to={"/allDropDown"}
+                       style={({isActive, isTransitioning}) => {
+                        return {
+                            fontWeight: isActive
+                                ? "bold"
+                                : "bold",
+                            color: isActive
+                                ? "#2a4270"
+                                : "#000",
+                            viewTransitionName: isTransitioning
+                                ? "slide"
+                                : "",
+                                textDecoration:'none'
+                        };
+                    }}>
+                        DropDown
                     </NavLink>
         </li>
         </ul>

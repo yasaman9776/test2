@@ -5,6 +5,9 @@ export const DefaultUl = styled.ul `
     width:${(props) =>props.width};
     direction:${(props)=> props.dir};
     direction: rtl;
+    margin: 0;
+    padding: 0;
+    
       
     
 `
@@ -21,7 +24,10 @@ export const DefaultOl = styled.ol `
     width:${(props) =>props.width};
     direction:${(props)=> props.dir};
     direction: rtl;
-    Color:${CokatexColors.error};
-      
+    li::marker{color:${CokatexColors.alert}};
+    margin: 0;
+    padding: 0;
     
+    
+      
 `

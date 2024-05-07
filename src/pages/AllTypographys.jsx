@@ -1,9 +1,7 @@
-import {
-    DefaultTypography,
-  
-} from "../components/Typography";
-
+import { DefaultTypography } from "../components/Typography";
 import { CokatexColors } from "../helper/colors";
+import { DefaultUl, DefaultLi, DefaultOl } from "../components/List";
+
 
 const AllTypographys = ({props}) => {
 
@@ -439,6 +437,83 @@ const AllTypographys = ({props}) => {
                     رنگ متن (طوسی روشن)
                 </DefaultTypography>
             </div>
+            
+            
+        </div>
+        <div
+            style={{
+            direction: 'rtl',
+            display: 'flex',
+            marginBottom: 50
+        }}>
+                <div
+                  style={{
+                  direction: 'rtl',
+                  display: 'flex',
+                  marginBottom: 50,
+                  marginLeft: 100
+                  }}>
+                <DefaultUl className="ul">
+                    <DefaultLi>
+                       <DefaultTypography>
+                          موارد لیست را مشاهده میکنید
+                       </DefaultTypography>
+                    </DefaultLi>
+                    <DefaultLi>
+                       <DefaultTypography>
+                          موارد لیست را مشاهده میکنید
+                       </DefaultTypography>
+                    </DefaultLi>
+                    <DefaultLi>
+                       <DefaultTypography>
+                          موارد لیست را مشاهده میکنید
+                       </DefaultTypography>
+                    </DefaultLi>
+                    <DefaultLi>
+                       <DefaultTypography>
+                          موارد لیست را مشاهده میکنید
+                       </DefaultTypography>
+                    </DefaultLi>
+                    <DefaultLi>
+                       <DefaultTypography>
+                          موارد لیست را مشاهده میکنید
+                       </DefaultTypography>
+                    </DefaultLi>
+                </DefaultUl>
+                </div>
+                <DefaultOl>
+                    <DefaultLi>
+                       <DefaultTypography>
+                          موارد لیست را مشاهده میکنید
+                       </DefaultTypography>
+                    </DefaultLi>
+                    <DefaultLi>
+                       <DefaultTypography>
+                          موارد لیست را مشاهده میکنید
+                       </DefaultTypography>
+                    </DefaultLi>
+                    <DefaultLi>
+                       <DefaultTypography>
+                          موارد لیست را مشاهده میکنید
+                       </DefaultTypography>
+                    </DefaultLi>
+                    <DefaultLi>
+                       <DefaultTypography>
+                          موارد لیست را مشاهده میکنید
+                       </DefaultTypography>
+                    </DefaultLi>
+                    <DefaultLi>
+                       <DefaultTypography>
+                          موارد لیست را مشاهده میکنید
+                       </DefaultTypography>
+                    </DefaultLi>
+                </DefaultOl>
+            
+            
+            
+            
+            
+            
             
             
         </div>

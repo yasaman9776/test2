@@ -11,4 +11,5 @@ export const CokatexColors = {
     lightAccept:'#07882ddb',
     lightGray:'#E5E0EB',
     darkGray:'#ABA7AF',
+    black:'#000',
   }

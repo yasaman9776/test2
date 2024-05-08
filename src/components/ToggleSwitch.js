@@ -18,9 +18,9 @@ const Label = styled.label`
 
     return "10px";
   }};
-  width: 6em;
-  height: 3.4em;
-
+  width: 8em;
+  height: 4.4em;
+  top:10px;
   cursor: ${props => (props.disabled ? "not-allowed" : "pointer")};
 
   ${Input} {
@@ -45,8 +45,8 @@ const Slider = styled.span`
   &::before {
     position: absolute;
     content: "";
-    height: 2.6em;
-    width: 2.6em;
+    height: 3.6em;
+    width: 3.6em;
     left: 0.4em;
     bottom: 0.4em;
     background-color: white;
@@ -60,9 +60,9 @@ const Slider = styled.span`
   }
 
   ${Input}:checked + &::before {
-    -webkit-transform: translateX(2.6em);
-    -ms-transform: translateX(2.6em);
-    transform: translateX(2.6em);
+    -webkit-transform: translateX(3.5em);
+    -ms-transform: translateX(3.5em);
+    transform: translateX(3.5em);
   }
 
   ${Input}:focus + & {
@@ -74,7 +74,20 @@ const Slider = styled.span`
     background: #e6e6e6;
   }
 `;
+const Span = styled.span`
+color:#fff;
+font-family:"IRANYekan";
+`
+const Title = styled.text`
+color : #000;
+font-family:"IRANYekan";
+text-align:right;
+`
 
+const ToggleBox = styled.div `
+display:flex;
+flex-direction:column;
+`
 export default function ToggleSwitch({
   value,
   checked,
@@ -83,20 +96,28 @@ export default function ToggleSwitch({
   id,
   disabled,
   title,
-  size
+  size,
+  label
 }) {
   return (
-    <Label htmlFor={id} disabled={disabled} title={title} size={size}>
-      <Input
-        id={id}
-        type="checkbox"
-        name={name}
-        value={value}
-        disabled={disabled}
-        checked={checked}
-        onChange={onChange}
-      />
-      <Slider />
-    </Label>
+  <ToggleBox>
+<Title>
+
+  {label}
+</Title>
+<Label htmlFor={id} disabled={disabled} title={title} size={size}>
+   
+   <Input
+     id={id}
+     type="checkbox"
+     name={name}
+     value={value}
+     disabled={disabled}
+     checked={checked}
+     onChange={onChange}
+   />
+   <Slider />
+ </Label>
+  </ToggleBox>
   );
 }

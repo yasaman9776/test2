@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { CokatexColors } from "../helper/colors";
+import { BorderRadius } from "../helper/radius";
 
 export const DefaultInput = styled.input `
 border-width:1px;
 border-color:${(props)=>props.borderColor};
 border-style:solid;
 padding:${(props)=> props.inputPadding};
-border-radius:5px;
+border-radius:${BorderRadius.xs};
 width:${(props) =>props.width};
 direction:${(props)=>props.dir};
 font-family:"IRANYekan";
@@ -40,7 +40,7 @@ border-width:1px;
 border-color:${(props)=>props.borderColor};
 border-style:solid;
 padding:12px;
-border-radius:5px;
+border-radius:${BorderRadius.xs};
 width:${(props) =>props.width};
 direction:${(props)=>props.dir};
 
@@ -50,7 +50,7 @@ export const DefaultTextarea = styled.textarea`
 border-color:${(props) =>props.borderColor};
 border-width:1px;
 border-style:solid;
-border-radius:5px;
+border-radius:${BorderRadius.xs};
 direction:${(props)=> props.dir};
 padding:15px;
 font-family:"IRANYekan";
@@ -104,7 +104,7 @@ export const NumberInput = styled.div `
     display:flex;
     flex-direction:row-reverse;
     justify-content:space-between;
-    border-radius:50px;
+    border-radius:${BorderRadius.lg};
     border-color:${(props) => props.borderColor};
     border-style:solid;
     border-width:1px;

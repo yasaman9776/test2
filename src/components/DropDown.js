@@ -1,11 +1,11 @@
 import styled from "styled-components";
-
+import { BorderRadius } from "../helper/radius";
 export const DefaultSelect = styled.select`
         background-color:#fff;
         border-color:${(props)=> props.borderColor};
         border-style:solid;
         border-width:1px;
-        border-radius:5px;
+        border-radius:${BorderRadius.xs};
         font-family:"IRANYekanBold";
         direction:${(props)=> props.dir};
         font-size:15px;
@@ -53,7 +53,7 @@ border-color:${(props) => props.borderColor};
 background-color:${(props) => props.backgroundColor};
 
 padding:${(props) => props.customPadding};
-border-radius:5px;
+border-radius:${BorderRadius.xs};
 `
 export const SelectCheckBoxHead = styled.div `
 position: relative;
@@ -65,7 +65,7 @@ background-color: #fff;
 border-color:${(props)=> props.borderColor};
 border-style:solid;
 border-width:1px;
-border-radius:5px;
+border-radius:${BorderRadius.xs};
 font-family:"IRANYekanBold";
 direction:${(props)=> props.dir};
 font-size:15px;
@@ -83,5 +83,5 @@ border-color:${(props) => props.borderColor};
 background-color:${(props) => props.backgroundColor};
 box-shadow:0px 8px 16px 0px rgba(12, 13, 66, 0.07);
 padding:${(props) => props.customPadding};
-border-radius:5px;
+border-radius:${BorderRadius.xs};
 `

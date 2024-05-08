@@ -11,7 +11,7 @@ const AllDropDown = ({props}) =>{
     
     const [showList,
         setShowList] = useState(false);
-        const [value, setCheckbox] = useState(true);
+        const [value, setCheckbox] = useState(false);
     const options = ["مورد اول", "مورد دوم", "مورد سوم"];
     const selectOptions = ["گزینه یک", "گزینه دو"];
     const onOptionChangeHandler = (event) => {

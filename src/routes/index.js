@@ -5,6 +5,7 @@ import AllButtons from "../pages/AllButtons";
 import AllInputs from "../pages/AllInputs";
 import AllTypographys from "../pages/AllTypographys";
 import AllDropDown from "../pages/AllDropDown";
+import AllDifferentInputType from "../pages/AllDifferentInputType";
 export const router =createBrowserRouter([
     {
         path: "/",
@@ -32,6 +33,11 @@ export const router =createBrowserRouter([
             {
                 path:"/allDropDown",
                 element: <AllDropDown/>,
+
+            },
+            {
+                path:"/allDifferentInputType",
+                element: <AllDifferentInputType/>,
 
             },
             

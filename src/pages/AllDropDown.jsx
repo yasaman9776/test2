@@ -6,11 +6,11 @@ import Down from "../assets/icon/Down";
 import Checkbox from "../components/CheckBox";
 const AllDropDown = ({props}) => {
 
-    const [data,
+    const [
         setData] = useState(undefined);
     const [showList,
         setShowList] = useState(false);
-        const [value, setCheckbox] = useState(true);
+        const [value, setCheckbox] = useState(false);
     const options = ["مورد اول", "مورد دوم", "مورد سوم"];
     const selectOptions = ["گزینه یک", "گزینه دو"];
     const onOptionChangeHandler = (event) => {

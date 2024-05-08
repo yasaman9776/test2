@@ -33,7 +33,7 @@ const AllButtons = ({props}) => {
                 }}>
                     Large Button
                 </span>
-                <MainLargeButton >
+                <MainLargeButton radius={""}>
                     کلیک کنید !
                 </MainLargeButton>
             </div>

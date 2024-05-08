@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import {CokatexColors} from '../helper/colors';
-
+import { BorderRadius } from '../helper/radius';
 const handleBackgroundColor = backgroundColor => {
     switch (backgroundColor) {
         case "secondary":
@@ -87,7 +87,7 @@ export const DefaultButton = styled.button `
     ${ ({borderColor}) => handleBorderColor(borderColor)};
     ${ ({textColor}) => handleTextColor(textColor)};;
     cursor:pointer;
-    border-radius:5px;
+    border-radius:${BorderRadius.xs};
     font-family:"IRANYekanBold";
     box-shadow:0px 8px 16px 0px rgba(12, 13, 66, 0.34);
     &:hover{

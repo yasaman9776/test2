@@ -21,6 +21,7 @@ const Label = styled.label`
   width: 8em;
   height: 4.4em;
   top:10px;
+  margin:auto;
   cursor: ${props => (props.disabled ? "not-allowed" : "pointer")};
 
   ${Input} {

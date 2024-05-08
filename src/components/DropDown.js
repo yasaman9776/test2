@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { BorderRadius } from "../helper/radius";
+import {CokatexColors} from '../helper/colors';
 export const DefaultSelect = styled.select`
         background-color:#fff;
         border-color:${(props)=> props.borderColor};
@@ -85,3 +86,31 @@ box-shadow:0px 8px 16px 0px rgba(12, 13, 66, 0.07);
 padding:${(props) => props.customPadding};
 border-radius:${BorderRadius.xs};
 `
+
+
+// DropDownTag-----------------------------------------------------------------------
+
+export const DropDownTag = styled.div`
+background-color:${(props) => props.backgroundColor};
+background-color:${CokatexColors.lightGray};
+width:${(props) =>props.width};
+width: 40px;
+height:${(props) =>props.height};
+height: 30px;
+direction:${(props) =>props.dir};
+padding:${(props) => props.customPadding};
+border-radius:${BorderRadius.xs};
+justify-content: center;
+padding-left: 10px;
+`
+
+export const DropDownTagClose = styled.button`
+width:${(props) =>props.width};
+width: 30px;
+height:${(props) =>props.height};
+height: 30px;
+`
+
+// DropDownTag--End------------------------------------------------------------------
+
+

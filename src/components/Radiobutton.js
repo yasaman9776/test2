@@ -30,6 +30,7 @@ const Label = styled.label`
 
 const Indicator = styled.div`
   border: 1px solid;
+  border-color:#D9D1E0;
   border-radius: 1em;
   width: 18px;
   height: 18px;

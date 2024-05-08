@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { DefaultSelect, DefaultOption ,SelectDiv ,SelectCheckBoxHead,MultipleSelection,SelectBox,CheckBoxOption} from "../components/Dropdown";
+import { DefaultSelect, DefaultOption ,SelectDiv ,SelectBox,CheckBoxOption} from "../components/Dropdown";
 import { CokatexColors } from "../helper/colors";
-import Checkbox from "../components/CheckBox";
+import Checkbox from "../components/Checkbox";
 import Down from "../assets/icon/Down"
-import { Label } from "../components/Label";
+
 const AllDropDown = ({props}) =>{
  ;
     const [data, setData] = useState(undefined)

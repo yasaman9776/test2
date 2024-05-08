@@ -33,7 +33,7 @@ const Indicator = styled.div`
   background: ${(props) => props.backgroundColor};
   position: absolute;
   top: 0em;
-  left: 0;
+  left: ${(props) => props.leftIndicator};
   border-style:solid;
   border-width : 1px;
   border-color:${(props) => props.borderColor};
@@ -82,6 +82,7 @@ export default function Checkbox({
   borderColor,
   backgroundColor,
   checkColor,
+  leftIndicator
 }) {
   return (
     <Label htmlFor={id} disabled={disabled}>
@@ -100,7 +101,7 @@ export default function Checkbox({
         onChange={onChange}
         
       />
-      <Indicator borderColor={borderColor} backgroundColor={backgroundColor} checkColor={checkColor}/>
+      <Indicator borderColor={borderColor} backgroundColor={backgroundColor} checkColor={checkColor} leftIndicator={leftIndicator}/>
     </Label>
   );
 }

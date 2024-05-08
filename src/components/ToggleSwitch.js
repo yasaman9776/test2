@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { CokatexColors } from "../helper/colors";
 const Input = styled.input`
   height: 0;
@@ -67,7 +67,7 @@ const Slider = styled.span`
   }
 
   ${Input}:focus + & {
-    box-shadow: 0 0 0.1em #2196f3;
+    box-shadow: 0 0 0.1em #E5E0EB;
   }
 
   ${Input}:disabled + & {

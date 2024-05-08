@@ -84,6 +84,7 @@ const AllDropDown = ({props}) =>{
                                 // </Label>
 
                                 <Checkbox
+                                rightIndicator={"-20px"}
                                 backgroundColor={`${CokatexColors.white}`}
                                 borderColor={`${CokatexColors.lightGray}`}
                                 fontFamily={"IRANYekan"}

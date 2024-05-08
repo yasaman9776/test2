@@ -68,7 +68,7 @@ import RadioButton from "../components/Radiobutton";
             backgroundColor={`${CokatexColors.white}`}
             borderColor={`${CokatexColors.lightGray}`}
             fontFamily={"IRANYekan"}
-            leftIndicator={"-30px"}
+            rightIndicator={"-30px"}
             label="متن کنار چک باکس"
             value={checkbox}
             checked={checkbox}

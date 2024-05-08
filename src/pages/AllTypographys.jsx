@@ -451,7 +451,8 @@ const AllTypographys = ({props}) => {
                   direction: 'rtl',
                   display: 'flex',
                   marginBottom: 50,
-                  marginLeft: 100
+                  marginLeft: 100,
+                  marginRight: 150,
                   }}>
                 <DefaultUl className="ul">
                     <DefaultLi>

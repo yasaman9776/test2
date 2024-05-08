@@ -1,13 +1,15 @@
-import {useState} from "react";
-import {DefaultSelect, DefaultOption, SelectDiv, SelectBox} from "../components/Dropdown";
-import {CokatexColors} from "../helper/colors";
-import {CheckBoxOption} from "../components/Dropdown";
-import Down from "../assets/icon/Down";
+import { useState } from "react";
+import { DefaultSelect, DefaultOption ,SelectDiv ,SelectCheckBoxHead,MultipleSelection,SelectBox,CheckBoxOption} from "../components/Dropdown";
+import { CokatexColors } from "../helper/colors";
 import Checkbox from "../components/CheckBox";
-const AllDropDown = ({props}) => {
+import Down from "../assets/icon/Down"
+import { Label } from "../components/Label";
+const AllDropDown = ({props}) =>{
+ ;
+    const [data, setData] = useState(undefined)
+    let show = true;
 
-    const [
-        setData] = useState(undefined);
+   
     const [showList,
         setShowList] = useState(false);
         const [value, setCheckbox] = useState(false);

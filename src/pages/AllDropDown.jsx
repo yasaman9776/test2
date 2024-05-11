@@ -1,14 +1,17 @@
 import { useState } from "react";
-import { DefaultSelect, DefaultOption ,SelectDiv ,SelectBox,CheckBoxOption} from "../components/Dropdown";
+import { DefaultSelect, DefaultOption ,SelectDiv ,SelectCheckBoxHead,MultipleSelection,SelectBox,CheckBoxOption,DropDownTag} from "../components/Dropdown";
+import { DefaultTypography } from "../components/Typography";
 import { CokatexColors } from "../helper/colors";
 import Checkbox from "../components/Checkbox";
 import Down from "../assets/icon/Down"
-
+import { Label } from "../components/Label";
+import Multiselect from 'multiselect-react-dropdown';
 const AllDropDown = ({props}) =>{
  ;
     const [data, setData] = useState(undefined)
     let show = true;
 
+    
    
     const [showList,
         setShowList] = useState(false);
@@ -26,7 +29,29 @@ const AllDropDown = ({props}) =>{
         padding: 50,
         display: "flex",
         flexDirection: "row-reverse"
-    }}>
+    }}> 
+        <div>
+        <DropDownTag><DefaultTypography>Tag</DefaultTypography></DropDownTag>
+            
+
+        </div>
+
+        <div>
+        <Multiselect
+  isObject={false}
+  onKeyPressFn={function noRefCheck(){}}
+  onRemove={function noRefCheck(){}}
+  onSearch={function noRefCheck(){}}
+  onSelect={function noRefCheck(){}}
+  options={[
+    'Option 1',
+    'Option 2',
+    'Option 3',
+    'Option 4',
+    'Option 5'
+  ]}
+/>
+        </div>
         <div style={{
             textAlign: "right"
         }}>
@@ -59,7 +84,7 @@ const AllDropDown = ({props}) =>{
                 customPadding={"5px"}>
 
                 <CheckBoxOption fontFamily={"IRANYekanBold"}>گزینه های مورد نظر خود را انتخاب کنید</CheckBoxOption>
-
+                <DropDownTag><DefaultTypography>Tag</DefaultTypography></DropDownTag>
                 <Down
                     color={`${CokatexColors.black}`}
                     height={"12px"}

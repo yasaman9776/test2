@@ -49,3 +49,6 @@ code {
   .ul{
     list-style-image: url('./assets/icon/b.svg');
   }
+.CircularProgressbar-text{
+  font-family: "IRANYekanBold";
+}

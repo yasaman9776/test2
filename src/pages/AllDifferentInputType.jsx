@@ -3,7 +3,7 @@ import ToggleSwitch from "../components/ToggleSwitch";
 import Checkbox from "../components/Checkbox";
 import { CokatexColors } from "../helper/colors";
 import RadioButton from "../components/Radiobutton";
-
+import ProgressBarCustom from "../components/Progress";
  const AllDifferentInputType = ({ props }) => {
   const [value, setToggle] = useState(true);
   const [value2, setToggle2] = useState(true);
@@ -95,7 +95,9 @@ import RadioButton from "../components/Radiobutton";
             disabled
             onChange={({ target }) => setRadio(!target.value)} /> 
           </div>
-        <div></div> </div> </>
+        <div></div> </div>
+
+         </>
   );
 
 

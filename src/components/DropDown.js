@@ -94,23 +94,23 @@ export const DropDownTag = styled.div`
 background-color:${(props) => props.backgroundColor};
 background-color:${CokatexColors.lightGray};
 width:${(props) =>props.width};
-width: 40px;
+width: max-content;
 height:${(props) =>props.height};
 height: 30px;
 direction:${(props) =>props.dir};
 padding:${(props) => props.customPadding};
 border-radius:${BorderRadius.xs};
 justify-content: center;
-padding-left: 10px;
+padding-left: 8px;
 `
 
 export const DropDownTagClose = styled.div`
 width:${(props) =>props.width};
-width: 40px;
+width: max-content;
 height:${(props) =>props.height};
 height: 30px;
 padding:${(props) => props.customPadding};
-padding: 0px 8px 0px 4px;
+padding: 3px 8px 0px 6px;
 `
 
 // DropDownTag--End------------------------------------------------------------------

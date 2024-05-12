@@ -2,6 +2,7 @@ import { useState } from "react";
 import { DefaultSelect, DefaultOption ,SelectDiv ,SelectCheckBoxHead,MultipleSelection,SelectBox,CheckBoxOption,DropDownTag,DropDownTagClose} from "../components/Dropdown";
 import { DefaultTypography } from "../components/Typography";
 import { CokatexColors } from "../helper/colors";
+import Cross from "../assets/icon/Cross";
 import Checkbox from "../components/Checkbox";
 import Down from "../assets/icon/Down"
 import { Label } from "../components/Label";
@@ -17,10 +18,18 @@ const AllDropDown = ({props}) =>{
         setShowList] = useState(false);
         const [value, setCheckbox] = useState(false);
     const options = ["مورد اول", "مورد دوم", "مورد سوم"];
-    const selectOptions = [["گزینه یک", 1],["گزینه دو", 2],["گزینه سه", 3],["گزینه چهار", 4],["گزینه پنج", 5]];
+    const selectOptions = ["گزینه یک","گزینه دو","گزینه سه","گزینه چهار","گزینه پنج"];
     const onOptionChangeHandler = (event) => {
         setData(event.target.value);
         console.log("User Selected Value - ", event.target.value);
+    };
+
+    const CheckBoxChangeHandler = (e) => {
+        setCheckbox(!(e.value))
+        // if (e.value == 1){
+
+        // }
+
     };
 
     return ( 
@@ -63,7 +72,15 @@ const AllDropDown = ({props}) =>{
                 customPadding={"5px"}>
 
                 <CheckBoxOption fontFamily={"IRANYekanBold"}>گزینه های مورد نظر خود را انتخاب کنید</CheckBoxOption>
-                <DropDownTag style={{display: "flex",}}><DefaultTypography>Tag</DefaultTypography><DropDownTagClose>z</DropDownTagClose></DropDownTag>
+                <DropDownTag style={{display: "flex",}}>
+
+                    {/* <DefaultTypography>{selectOptions.filter((selectOptions.value = 1) => {
+                            (c)}</DefaultTypography> */}
+                    <DropDownTagClose>
+                        <Cross color={`${CokatexColors.black}`} height={"12px"} width={"12px"}/>
+                    </DropDownTagClose>
+
+                </DropDownTag>
                 <Down
                     color={`${CokatexColors.black}`}
                     height={"12px"}
@@ -93,10 +110,11 @@ const AllDropDown = ({props}) =>{
                                 borderColor={`${CokatexColors.lightGray}`}
                                 fontFamily={"IRANYekan"}
                                 key={index}
-                                label={selectOption[0]}
-                                value={selectOption[1]}
+                                name={selectOption}
+                                label={selectOption}
+                                value={value}
                                 
-                                onChange={()=>setCheckbox(!(selectOption[1]))}
+                                onChange={(e)=>CheckBoxChangeHandler(e)}
                                 checkColor={`${CokatexColors.navyBlue}`}
                                 />  
                             )

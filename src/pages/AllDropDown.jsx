@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DefaultSelect, DefaultOption ,SelectDiv ,SelectCheckBoxHead,MultipleSelection,SelectBox,CheckBoxOption,DropDownTag} from "../components/Dropdown";
+import { DefaultSelect, DefaultOption ,SelectDiv ,SelectCheckBoxHead,MultipleSelection,SelectBox,CheckBoxOption,DropDownTag,DropDownTagClose} from "../components/Dropdown";
 import { DefaultTypography } from "../components/Typography";
 import { CokatexColors } from "../helper/colors";
 import Checkbox from "../components/Checkbox";
@@ -17,7 +17,7 @@ const AllDropDown = ({props}) =>{
         setShowList] = useState(false);
         const [value, setCheckbox] = useState(false);
     const options = ["مورد اول", "مورد دوم", "مورد سوم"];
-    const selectOptions = ["گزینه یک", "گزینه دو"];
+    const selectOptions = [["گزینه یک", 1],["گزینه دو", 2],["گزینه سه", 3],["گزینه چهار", 4],["گزینه پنج", 5]];
     const onOptionChangeHandler = (event) => {
         setData(event.target.value);
         console.log("User Selected Value - ", event.target.value);
@@ -30,28 +30,7 @@ const AllDropDown = ({props}) =>{
         display: "flex",
         flexDirection: "row-reverse"
     }}> 
-        <div>
-        <DropDownTag><DefaultTypography>Tag</DefaultTypography></DropDownTag>
-            
 
-        </div>
-
-        <div>
-        <Multiselect
-  isObject={false}
-  onKeyPressFn={function noRefCheck(){}}
-  onRemove={function noRefCheck(){}}
-  onSearch={function noRefCheck(){}}
-  onSelect={function noRefCheck(){}}
-  options={[
-    'Option 1',
-    'Option 2',
-    'Option 3',
-    'Option 4',
-    'Option 5'
-  ]}
-/>
-        </div>
         <div style={{
             textAlign: "right"
         }}>
@@ -84,7 +63,7 @@ const AllDropDown = ({props}) =>{
                 customPadding={"5px"}>
 
                 <CheckBoxOption fontFamily={"IRANYekanBold"}>گزینه های مورد نظر خود را انتخاب کنید</CheckBoxOption>
-                <DropDownTag><DefaultTypography>Tag</DefaultTypography></DropDownTag>
+                <DropDownTag style={{display: "flex",}}><DefaultTypography>Tag</DefaultTypography><DropDownTagClose>z</DropDownTagClose></DropDownTag>
                 <Down
                     color={`${CokatexColors.black}`}
                     height={"12px"}
@@ -114,10 +93,10 @@ const AllDropDown = ({props}) =>{
                                 borderColor={`${CokatexColors.lightGray}`}
                                 fontFamily={"IRANYekan"}
                                 key={index}
-                                label={selectOption}
-                                value={value}
-                                checked={value}
-                                onChange={({ target }) => setCheckbox(!value)}
+                                label={selectOption[0]}
+                                value={selectOption[1]}
+                                
+                                onChange={()=>setCheckbox(!(selectOption[1]))}
                                 checkColor={`${CokatexColors.navyBlue}`}
                                 />  
                             )

@@ -104,11 +104,13 @@ justify-content: center;
 padding-left: 10px;
 `
 
-export const DropDownTagClose = styled.button`
+export const DropDownTagClose = styled.div`
 width:${(props) =>props.width};
-width: 30px;
+width: 40px;
 height:${(props) =>props.height};
 height: 30px;
+padding:${(props) => props.customPadding};
+padding: 0px 8px 0px 4px;
 `
 
 // DropDownTag--End------------------------------------------------------------------

@@ -106,6 +106,25 @@ const Navbar = () =>{
                         All Input Types
                     </NavLink>
         </li>
+        <li style={{marginRight:15,marginLeft:15,textDecoration:"none"}}>
+                    <NavLink to={"/allProgressBars"}
+                       style={({isActive, isTransitioning}) => {
+                        return {
+                            fontWeight: isActive
+                                ? "bold"
+                                : "bold",
+                            color: isActive
+                                ? "#2a4270"
+                                : "#000",
+                            viewTransitionName: isTransitioning
+                                ? "slide"
+                                : "",
+                                textDecoration:'none'
+                        };
+                    }}>
+                        All Progressbars
+                    </NavLink>
+        </li>
         </ul>
         </div>
     )

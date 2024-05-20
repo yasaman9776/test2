@@ -12,24 +12,47 @@ const AllDropDown = ({props}) =>{
     const [data, setData] = useState(undefined)
     let show = true;
 
-    
-   
-    const [showList,
-        setShowList] = useState(false);
-        const [value, setCheckbox] = useState(false);
+    const [selectedValue, setSelectedValue] = useState([])
+    const [showList, setShowList] = useState(false);
     const options = ["مورد اول", "مورد دوم", "مورد سوم"];
-    const selectOptions = ["گزینه یک","گزینه دو","گزینه سه","گزینه چهار","گزینه پنج"];
+    const selectOptions = [{label:"گزینه یک",value:1},{label:"گزینه دو",value:2},{label:"گزینه سه",value:3},{label:"گزینه چهار",value:4},{label:"گزینه پنج",value:5}];
     const onOptionChangeHandler = (event) => {
         setData(event.target.value);
         console.log("User Selected Value - ", event.target.value);
     };
 
     const CheckBoxChangeHandler = (e) => {
-        setCheckbox(!(e.value))
-        // if (e.value == 1){
+        // var item=   selectedValue.find((checkBoxTag) => checkBoxTag.value === 1)
+        // console.log(item);
+        if (e.target.checked) {
+        setSelectedValue([...selectedValue,{label:e.target.name,value:e.target.value}])
+        // console.log(selectedValue)
 
-        // }
+    }
+    else {
+        var Chek=selectedValue;
+        Chek=Chek.filter(function(item)
+        {return  item.value!=e.target.value
+        })
+      setSelectedValue(Chek);
+    }
+    };
 
+    const CloseTagChangeHandler = (e) => {
+        var Chek=selectedValue;
+        Chek=Chek.filter(function(item)
+        {return  item.value!=e
+        })
+      setSelectedValue(Chek);
+      
+    };
+
+    const CheckedChangeHandler = (e) => {
+     var item=   selectedValue.find((checkBoxTag) => {
+            return checkBoxTag.value === e.target.value;
+            
+        })
+        console.log(item);
     };
 
     return ( 
@@ -45,10 +68,13 @@ const AllDropDown = ({props}) =>{
         }}>
             <DefaultSelect
                 onChange={onOptionChangeHandler}
+                customPadding={"5px 8px 5px 8px"}
                 dir={"rtl"}
                 borderColor={`${CokatexColors.lightGray}`}
                 backgroundHoverColor={`${CokatexColors.navyBlue}`}>
-                <DefaultOption backgroundHoverColor={`${CokatexColors.navyBlue}`}>گزینه مورد نظر خود را انتخاب کنید</DefaultOption>
+                <DefaultOption fontFamily={'IRANYekanBold'} backgroundHoverColor={`${CokatexColors.navyBlue}`}>
+                    گزینه مورد نظر خود را انتخاب کنید
+                   </DefaultOption>
                 {options.map((option, index) => {
                     return (
                         <DefaultOption key={index} backgroundHoverColor={`${CokatexColors.navyBlue}`}>
@@ -69,24 +95,35 @@ const AllDropDown = ({props}) =>{
             <SelectDiv
                 borderColor={`${CokatexColors.lightGray}`}
                 onClick={() => setShowList(!showList)}
-                customPadding={"5px"}>
+                customPadding={"5px 8px 5px 8px"}>
+{
+    selectedValue.length==0?
+    <CheckBoxOption fontFamily={"IRANYekanBold"}>گزینه های مورد نظر خود را انتخاب کنید</CheckBoxOption>
 
-                <CheckBoxOption fontFamily={"IRANYekanBold"}>گزینه های مورد نظر خود را انتخاب کنید</CheckBoxOption>
-                <DropDownTag style={{display: "flex",}}>
+    :
+    selectedValue.map((checkBoxTag, index) => {
+        return(
+            <DropDownTag style={{display: "flex", marginLeft: "4px"}}>
+         <DefaultTypography>
+         {checkBoxTag.label}
+ </DefaultTypography>
+ <DropDownTagClose  onClick={(e)=>CloseTagChangeHandler(checkBoxTag.value)}>
+     <Cross color={`${CokatexColors.black}`} height={"12px"} width={"12px"}/>
+ </DropDownTagClose>
 
-                    {/* <DefaultTypography>{selectOptions.filter((selectOptions.value = 1) => {
-                            (c)}</DefaultTypography> */}
-                    <DropDownTagClose>
-                        <Cross color={`${CokatexColors.black}`} height={"12px"} width={"12px"}/>
-                    </DropDownTagClose>
+</DropDownTag>
+     )
+    })
+}
 
-                </DropDownTag>
+                   
+
                 <Down
                     color={`${CokatexColors.black}`}
-                    height={"12px"}
-                    width={"12px"}
+                    height={"15px"}
+                    width={"15px"}
                     style={{
-                    marginRight: 2
+                    marginRight: 1
                 }}/>
             </SelectDiv>
 
@@ -110,10 +147,10 @@ const AllDropDown = ({props}) =>{
                                 borderColor={`${CokatexColors.lightGray}`}
                                 fontFamily={"IRANYekan"}
                                 key={index}
-                                name={selectOption}
-                                label={selectOption}
-                                value={value}
-                                
+                                name={selectOption.label}
+                                label={selectOption.label}
+                                value={selectOption.value}
+                                checked={(e)=>CheckedChangeHandler(e)}
                                 onChange={(e)=>CheckBoxChangeHandler(e)}
                                 checkColor={`${CokatexColors.navyBlue}`}
                                 />  

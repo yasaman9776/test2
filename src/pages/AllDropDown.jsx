@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DefaultSelect, DefaultOption ,SelectDiv ,SelectCheckBoxHead,MultipleSelection,SelectBox,CheckBoxOption,DropDownTag,DropDownTagClose} from "../components/Dropdown";
+import { DefaultSelect, DefaultOption ,SelectDiv ,SelectCheckBoxHead,MultipleSelection,SelectBox,CheckBoxOption,DropDownTag,DropDownTagClose,DropDownTagDiv} from "../components/Dropdown";
 import { DefaultTypography } from "../components/Typography";
 import { CokatexColors } from "../helper/colors";
 import Cross from "../assets/icon/Cross";
@@ -48,11 +48,21 @@ const AllDropDown = ({props}) =>{
     };
 
     const CheckedChangeHandler = (e) => {
-     var item=   selectedValue.find((checkBoxTag) => {
-            return checkBoxTag.value === e.target.value;
+        if (e.target.checked) {
             
-        })
-        console.log(item);
+        }
+        else {
+            var Chek=selectedValue;
+            Chek=Chek.filter(function(item)
+            {return  item.value!=e.target.value
+            })
+          setSelectedValue(Chek);
+        }
+    //  var item=   selectedValue.find((checkBoxTag) => {
+    //         return checkBoxTag.value === e.target.value;
+            
+    //     })
+    //     console.log(item);
     };
 
     return ( 
@@ -96,6 +106,8 @@ const AllDropDown = ({props}) =>{
                 borderColor={`${CokatexColors.lightGray}`}
                 onClick={() => setShowList(!showList)}
                 customPadding={"5px 8px 5px 8px"}>
+                    <DropDownTagDiv>
+                    
 {
     selectedValue.length==0?
     <CheckBoxOption fontFamily={"IRANYekanBold"}>گزینه های مورد نظر خود را انتخاب کنید</CheckBoxOption>
@@ -115,7 +127,7 @@ const AllDropDown = ({props}) =>{
      )
     })
 }
-
+</DropDownTagDiv>
                    
 
                 <Down
@@ -150,7 +162,8 @@ const AllDropDown = ({props}) =>{
                                 name={selectOption.label}
                                 label={selectOption.label}
                                 value={selectOption.value}
-                                checked={(e)=>CheckedChangeHandler(e)}
+                                // checked={(e)=>CheckedChangeHandler(e)}
+                                checked={selectedValue.some(x=>x.value==selectOption.value)} 
                                 onChange={(e)=>CheckBoxChangeHandler(e)}
                                 checkColor={`${CokatexColors.navyBlue}`}
                                 />  

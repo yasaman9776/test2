@@ -47,6 +47,9 @@ justify-content:space-between;
 align-items:center;
 border-style:solid;
 border-width:1px;
+// overflow-x: auto;
+width:${(props) =>props.width};
+width: 300px;
 border-color:${(props) => props.borderColor};
 background-color:${(props) => props.backgroundColor};
 
@@ -74,7 +77,6 @@ direction:${(props) =>props.dir};
 background-color:#fff;
 display:flex;
 flex-direction:column;
-
 border-style:solid;
 border-width:1px;
 border-color:${(props) => props.borderColor};
@@ -87,18 +89,43 @@ border-radius:${BorderRadius.xs};
 
 // DropDownTag-----------------------------------------------------------------------
 
+export const DropDownTagDiv = styled.div`
+display:flex;
+width:${(props) =>props.width};
+width: 280px;
+direction:${(props) =>props.dir};
+direction:rtl;
+overflow-x: auto;
+overflow-y: hidden;
+::-webkit-scrollbar {
+    width: 4px;
+  },
+::-webkit-scrollbar-track {
+    background: red; 
+  },
+::-webkit-scrollbar-thumb {
+    background: #f1f1f1; 
+  },
+::-webkit-scrollbar-thumb:hover {
+    background: #000; 
+  },
+
+`
+
 export const DropDownTag = styled.div`
+display:flex;
+justify-content:end;
 background-color:${(props) => props.backgroundColor};
 background-color:${CokatexColors.lightGray};
 width:${(props) =>props.width};
 width: max-content;
+min-width: 100px;
 height:${(props) =>props.height};
 height: 30px;
 direction:${(props) =>props.dir};
 padding:${(props) => props.customPadding};
 border-radius:${BorderRadius.xs};
-justify-content: center;
-padding-left: 8px;
+padding-left: 4px;
 `
 
 export const DropDownTagClose = styled.div`

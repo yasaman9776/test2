@@ -7,6 +7,7 @@ import AllTypographys from "../pages/AllTypographys";
 import AllDropDown from "../pages/AllDropDown";
 import AllDifferentInputType from "../pages/AllDifferentInputType";
 import AllProgressBars from "../pages/AllProgressBars";
+import AllUploadType from "../pages/AllUploadType";
 export const router =createBrowserRouter([
     {
         path: "/",
@@ -44,6 +45,11 @@ export const router =createBrowserRouter([
             {
                 path:"/allProgressBars",
                 element: <AllProgressBars/>,
+
+            },
+            {
+                path:"/allUploadType",
+                element: <AllUploadType/>,
 
             },
             

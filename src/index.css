@@ -52,3 +52,8 @@ code {
 .CircularProgressbar-text{
   font-family: "IRANYekanBold";
 }
+.react-simple-star-rating-tooltip{
+  font-family: "IRANYekan";
+  background-color: transparent !important;
+  color: #000 !important;
+}

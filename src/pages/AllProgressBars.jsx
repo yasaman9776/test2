@@ -1,6 +1,11 @@
 import { CircleProgressbar,CircleProgressbarDone } from "../components/Progress";
 
 import FullAnimatedCircleProgressbar from "../components/Progressbar/FullAnimatedCircleProgressbar";
+import { ProgressBarBack ,Progressbar, InlineProgressbar } from "../components/Progressbar/LinearProgressbar";
+import { CokatexColors } from "../helper/colors";
+import { Label } from "../components/Label";
+import  DoneIcon from "../assets/icon/done";
+import FailIcon from "../assets/icon/fail";
 const AllProgressBars = ({props}) =>{
 
     return(
@@ -49,6 +54,88 @@ const AllProgressBars = ({props}) =>{
            </div>
           </div>
         </div>
+        <div
+        style={{
+          padding: 50,
+          display: "flex",
+          flexDirection: "row-reverse",
+          justifyContent:'space-between',
+          width:'80%',
+          margin:'auto'
+        }}>
+        <div style={{display:'flex',flexDirection:'column',alignItems:'flex-end'}}>
+        <Label fontFamily={"IRANYekanBold"} textALign={"right"}>
+          خط نازک
+        </Label>
+        <ProgressBarBack width={"250px"} height={"10px"}>
+            <Progressbar width={"56%"} height={"10px"} progressColor={`${CokatexColors.navyBlue}`}>
+
+            </Progressbar>
+         </ProgressBarBack>
+        </div>
+        <div style={{display:'flex',flexDirection:'column',alignItems:'flex-end'}}>
+        <Label fontFamily={"IRANYekanBold"} textALign={"right"}>
+          خط ضخیم
+        </Label>
+        <ProgressBarBack width={"250px"} height={"20px"}>
+            <Progressbar width={"25%"} height={"20px"} progressColor={`${CokatexColors.navyBlue}`}>
+
+            </Progressbar>
+         </ProgressBarBack>
+        </div>
+        <div style={{display:'flex',flexDirection:'column',alignItems:'flex-end'}}>
+        <Label fontFamily={"IRANYekanBold"} textALign={"right"}>
+          با درصد
+        </Label>
+       <InlineProgressbar>
+        <Label fontFamily={"IRANYekanBold"} fontSize={"12px"} marginLeft={"10px"}>
+          49%
+        </Label>
+       <ProgressBarBack width={"250px"} height={"10px"}>
+            <Progressbar width={"40%"} height={"10px"} progressColor={`${CokatexColors.navyBlue}`}>
+
+            </Progressbar>
+         </ProgressBarBack>
+       </InlineProgressbar>
+        </div>
+       
+          </div>
+          <div
+        style={{
+          padding: 50,
+          display: "flex",
+          flexDirection: "row-reverse",
+          justifyContent:'space-between',
+          width:'80%',
+          margin:'auto'
+        }}>
+          <div style={{display:'flex',flexDirection:'column',alignItems:'flex-end'}}>
+        <Label fontFamily={"IRANYekanBold"} textALign={"right"}>
+         تکمیل شده
+        </Label>
+       <InlineProgressbar>
+        <DoneIcon width={"12px"} height={"12px"} style={{marginLeft:5}}/>
+       <ProgressBarBack width={"250px"} height={"10px"}>
+            <Progressbar width={"100%"} height={"10px"} progressColor={`${CokatexColors.accept}`}>
+
+            </Progressbar>
+         </ProgressBarBack>
+       </InlineProgressbar>
+        </div>
+        <div style={{display:'flex',flexDirection:'column',alignItems:'flex-end'}}>
+        <Label fontFamily={"IRANYekanBold"} textALign={"right"}>
+         به ارور خورده
+        </Label>
+       <InlineProgressbar>
+        <FailIcon width={"12px"} height={"12px"} color={`${CokatexColors.error}`} style={{marginLeft:5}}/>
+       <ProgressBarBack width={"250px"} height={"10px"}>
+            <Progressbar width={"80%"} height={"10px"} progressColor={`${CokatexColors.error}`}>
+
+            </Progressbar>
+         </ProgressBarBack>
+       </InlineProgressbar>
+        </div>
+          </div>
         </>
     )
 }

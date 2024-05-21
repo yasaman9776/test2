@@ -1,7 +1,7 @@
 import { DefaultTypography } from "../components/Typography";
 import { CokatexColors } from "../helper/colors";
 import { DefaultUl, DefaultLi, DefaultOl } from "../components/List";
-
+import BackToTop from "../components/ArrowBackToTopBtn";
 
 const AllTypographys = ({props}) => {
 
@@ -518,7 +518,9 @@ const AllTypographys = ({props}) => {
             
             
         </div>
-    </div> </>
+    </div>
+    <BackToTop/>
+     </>
     )
 }
 

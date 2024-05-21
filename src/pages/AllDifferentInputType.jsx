@@ -3,13 +3,21 @@ import ToggleSwitch from "../components/ToggleSwitch";
 import Checkbox from "../components/Checkbox";
 import { CokatexColors } from "../helper/colors";
 import RadioButton from "../components/Radiobutton";
-import ProgressBarCustom from "../components/Progress";
+import { Rating } from 'react-simple-star-rating';
+import StarIcon from "../assets/icon/Star";
+import BackToTop from "../components/ArrowBackToTopBtn";
+import AllertIcon from "../assets/icon/Allert";
  const AllDifferentInputType = ({ props }) => {
   const [value, setToggle] = useState(true);
   const [value2, setToggle2] = useState(true);
   const [value3, setToggle3] = useState(true);
   const [checkbox, setCheckbox] = useState(false);
   const [radioValue, setRadio] = useState(true);
+  const [ratingValue, setRatingValue] = useState(0)
+
+  const handleRating = (rate: number) => {
+    setRatingValue(rate)
+  }
   return (
     <>
       <div
@@ -95,8 +103,32 @@ import ProgressBarCustom from "../components/Progress";
             disabled
             onChange={({ target }) => setRadio(!target.value)} /> 
           </div>
-        <div></div> </div>
+          <div style={{margin:20}}>
+        
+          <Rating 
+          showTooltip
+          rtl
+          tooltipArray={[
+            'بد',
+            'متوسط',
+            'خوب',
+            'عالی'
+          ]}
+          tooltipDefaultText="رتبه بندی"
+          emptyIcon={<StarIcon height={"36px"} width={"36"} color={"#E5E0EB"} />}
+          fillIcon={<StarIcon height={"36"} width={"36"} color={"#FFE600"}/>}
+          onClick={function noRefCheck(){}}
+          transition
 
+    />
+          </div> 
+          <div style={{margin:20}}>
+            <AllertIcon/>
+          </div>
+          </div>
+
+     
+<BackToTop/>
          </>
   );
 

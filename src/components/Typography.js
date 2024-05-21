@@ -116,12 +116,13 @@ const handleTextLevel = textLevel => {
 
 
 
-export const DefaultTypography = styled.div `
+export const DefaultTypography = styled.p `
 
 color:${(props) => props.color};
 ${ ({textLevel}) => handleTextLevel(textLevel)};
 &:hover{
     color:${(props) => props.hoverColor};
 };
-
+margin:0px;
+text-align:${(props)=> props.textAlign};
 ` 

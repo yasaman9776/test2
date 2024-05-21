@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useRef,useEffect } from "react";
 import { DefaultSelect, DefaultOption ,SelectDiv ,SelectCheckBoxHead,MultipleSelection,SelectBox,CheckBoxOption,DropDownTag,DropDownTagClose,DropDownTagDiv} from "../components/Dropdown";
 import { DefaultTypography } from "../components/Typography";
 import { CokatexColors } from "../helper/colors";
@@ -7,6 +7,27 @@ import Checkbox from "../components/Checkbox";
 import Down from "../assets/icon/Down"
 import { Label } from "../components/Label";
 import Multiselect from 'multiselect-react-dropdown';
+function useOnClick(ref, handler) {
+    useEffect(() => {
+      const listener = event => {
+        // Do nothing if clicking ref's element or descendent elements
+        if (!ref.current || ref.current.contains(event.target)) {
+          return;
+        }
+        // if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+        //   return;
+        // }
+  
+        handler(event);
+      };
+  
+      document.addEventListener("mousedown", listener);
+  
+      return () => {
+        document.removeEventListener("mousedown", listener);
+      };
+    }, []); // Empty array ensures that effect is only run on mount and unmount
+  }
 const AllDropDown = ({props}) =>{
  ;
     const [data, setData] = useState(undefined)
@@ -65,6 +86,19 @@ const AllDropDown = ({props}) =>{
     //     console.log(item);
     };
 
+    // window.onclick = function(event) {
+    //     if (showList) {
+    //         setShowList(!showList);
+    //     }
+    //     console.log(event.target);
+    //     // if (event.target == modal) {
+    //     //     modal.style.display = "none";
+    //     // }
+    // }
+    
+      const ref = useRef();
+
+      useOnClick(ref, () => setShowList(false));
     return ( 
     <> <div
         style={{
@@ -146,6 +180,7 @@ const AllDropDown = ({props}) =>{
                         dir={"rtl"}
                         backgroundColor={`${CokatexColors.white}`}
                         borderColor={`${CokatexColors.lightGray}`}
+                        ref={ref}
                         customPadding={"15px"}>
                         {selectOptions.map((selectOption, index) => {
                             return (
@@ -159,6 +194,7 @@ const AllDropDown = ({props}) =>{
                                 borderColor={`${CokatexColors.lightGray}`}
                                 fontFamily={"IRANYekan"}
                                 key={index}
+                                
                                 name={selectOption.label}
                                 label={selectOption.label}
                                 value={selectOption.value}
@@ -166,6 +202,7 @@ const AllDropDown = ({props}) =>{
                                 checked={selectedValue.some(x=>x.value==selectOption.value)} 
                                 onChange={(e)=>CheckBoxChangeHandler(e)}
                                 checkColor={`${CokatexColors.navyBlue}`}
+                                
                                 />  
                             )
                         })

@@ -60,6 +60,8 @@ const handleTextLevel = textLevel => {
             return "font-size:16px; font-family:IRANYekanNormal;" ;
         case "h3-14":
             return "font-size:14px; font-family:IRANYekanNormal;" ;
+            case "h3-8":
+                return "font-size:8px; font-family:IRANYekanNormal;" ;
         case "h4-26":
             return "font-size:26px; font-family:IRANYekanLight;" ; 
         case "h4-24":
@@ -125,4 +127,5 @@ ${ ({textLevel}) => handleTextLevel(textLevel)};
 };
 margin:0px;
 text-align:${(props)=> props.textAlign};
+fontSize:${(props) => props.fontSize};
 ` 

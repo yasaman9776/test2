@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import MainLayout from "../layout/MainLayout";
-import { AllBadges,AllButtons,AllDifferentInputType,AllDropDown,AllInputs,AllProgressBars,AllTypographys,AllUploadType } from "../pages";
+import { AllBadges,AllButtons,AllDifferentInputType,AllDropDown,AllInputs,AllProgressBars,AllTypographys,AllUploadType,AllToasts } from "../pages";
 export const router =createBrowserRouter([
     {
         path: "/",
@@ -51,7 +51,11 @@ export const router =createBrowserRouter([
                 element: <AllBadges/>,
 
             },
-            
+            {
+                path:"/allToasts",
+                element: <AllToasts/>,
+
+            },
         ],
     },
 ])

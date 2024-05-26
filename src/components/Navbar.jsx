@@ -163,6 +163,25 @@ const Navbar = () =>{
                         All Badges
                     </NavLink>
         </li>
+        <li style={{marginRight:15,marginLeft:15,textDecoration:"none"}}>
+                    <NavLink to={"/allToasts"}
+                       style={({isActive, isTransitioning}) => {
+                        return {
+                            fontWeight: isActive
+                                ? "bold"
+                                : "bold",
+                            color: isActive
+                                ? "#2a4270"
+                                : "#000",
+                            viewTransitionName: isTransitioning
+                                ? "slide"
+                                : "",
+                                textDecoration:'none'
+                        };
+                    }}>
+                        All Toasts
+                    </NavLink>
+        </li>
         </ul>
         </div>
     )

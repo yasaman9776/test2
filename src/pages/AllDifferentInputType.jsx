@@ -6,7 +6,8 @@ import RadioButton from "../components/Radiobutton";
 import { Rating } from 'react-simple-star-rating';
 import StarIcon from "../assets/icon/Star";
 import BackToTop from "../components/ArrowBackToTopBtn";
-import AllertIcon from "../assets/icon/Allert";
+
+import { DefaultTypography } from "../components/Typography";
  const AllDifferentInputType = ({ props }) => {
   const [value, setToggle] = useState(true);
   const [value2, setToggle2] = useState(true);
@@ -122,9 +123,7 @@ import AllertIcon from "../assets/icon/Allert";
 
     />
           </div> 
-          <div style={{margin:20}}>
-            <AllertIcon/>
-          </div>
+      
           </div>
 
      

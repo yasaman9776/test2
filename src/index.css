@@ -16,7 +16,20 @@ code {
 :root{
   --navy-blue: #2a4970;
   }
-
+  ::-webkit-scrollbar {
+    width: 6px;
+    height:4px;
+  }
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+::-webkit-scrollbar-thumb {
+    background: #ABA7AF; 
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: #4B3A5A; 
+  }
+/* 
   ::-webkit-scrollbar {
     width: 8px;
     padding-left: 5px;
@@ -28,24 +41,24 @@ code {
   }
    
   /* Handle */
-  ::-webkit-scrollbar-thumb {
+  /* ::-webkit-scrollbar-thumb {
     background: #E5E0EB; 
     border-radius: 10px;
     margin-left: 5px;
-  }
+  } */
   
   /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+  /* ::-webkit-scrollbar-thumb:hover {
     background: #adaab0; 
-  }
-  .scroller {
+  } */
+  /* .scroller {
     overflow-y: scroll;
     scrollbar-color: #0A4C95 #C2D2E4;
-  }
-  :root{
+  } */
+  /* :root{
     scrollbar-color: #E5E0EB #0A4C95 !important;
     scrollbar-width: thin !important;
-  }
+  } */ 
   .ul{
     list-style-image: url('./assets/icon/b.svg');
   }

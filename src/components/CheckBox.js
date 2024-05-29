@@ -84,7 +84,8 @@ export default function Checkbox({
   backgroundColor,
   checkColor,
   leftIndicator,
-  rightIndicator
+  rightIndicator,
+  
 }) {
   return (
     <Label htmlFor={id} disabled={disabled}>

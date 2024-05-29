@@ -115,13 +115,13 @@ const AllDropDown = ({props}) =>{
                 customPadding={"5px 8px 5px 8px"}
                 dir={"rtl"}
                 borderColor={`${CokatexColors.lightGray}`}
-                backgroundHoverColor={`${CokatexColors.navyBlue}`}>
-                <DefaultOption fontFamily={'IRANYekanBold'} backgroundHoverColor={`${CokatexColors.navyBlue}`}>
+                backgroundHoverColor={`${CokatexColors.accept}`}>
+                <DefaultOption fontFamily={'IRANYekanBold'} backgroundHoverColor={`${CokatexColors.accept}`}>
                     گزینه مورد نظر خود را انتخاب کنید
                    </DefaultOption>
                 {options.map((option, index) => {
                     return (
-                        <DefaultOption key={index} backgroundHoverColor={`${CokatexColors.navyBlue}`}>
+                        <DefaultOption key={index} backgroundHoverColor={`${CokatexColors.accept}`}>
                             {option}
                         </DefaultOption>
                     );

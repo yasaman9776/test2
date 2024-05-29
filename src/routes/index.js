@@ -51,6 +51,11 @@ export const router =createBrowserRouter([
                 element: <AllBadges/>,
 
             },
+            // {
+            //     path:"/allDatePickers",
+            //     element: <AllDatePickers/>,
+
+            // },
             
         ],
     },

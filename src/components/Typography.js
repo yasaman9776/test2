@@ -29,7 +29,7 @@ const handleTextLevel = textLevel => {
         case "h1-18":
             return "font-size:18px; font-family:IRANYekanExtra;" ;
         case "h1-16":
-            return "font-size:16px; font-family:IRANYekanExtra;" ;
+            return "ofnt-size:16px; font-family:IRANYekanExtra;" ;
         case "h1-14":
             return "font-size:14px; font-family:IRANYekanExtra;" ;
         case "h2-26":

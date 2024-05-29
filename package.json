@@ -6,6 +6,7 @@
     "cra-template": "1.2.0",
     "d3-ease": "^3.0.1",
     "multiselect-react-dropdown": "^2.0.25",
+    "persian-datepicker": "^1.2.0",
     "prop-types": "^15.8.1",
     "rc-progress": "^4.0.0",
     "react": "^18.2.0",
@@ -19,7 +20,8 @@
     "react-simple-star-rating": "^5.1.7",
     "react-toastify": "^10.0.5",
     "styled-components": "^6.1.8",
-    "web-vitals": "^3.5.2"
+    "web-vitals": "^3.5.2",
+    "zaman": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

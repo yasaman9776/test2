@@ -4,6 +4,7 @@ import { Label } from "../components/Label";
 import { Minus,Plus,OpenEye,CloseEye } from "../assets/icon";
 import { useState } from "react";
 import { MiniIcon } from "../components/Button";
+import Accordion from "../components/Accordion";
 const AllInputs = ({props}) =>{
 
     const [showPassword, setShowPassword] = useState(false);
@@ -73,6 +74,9 @@ const AllInputs = ({props}) =>{
                 <Minus height={"20px"} width={"20px"} color={"#000"}/>
             </MiniIcon>
         </NumberInput>
+     </div>
+     <div style={{ padding: 50,display:'flex',flexDirection:'row-reverse'}}>
+        <Accordion/>
      </div>
         </>
     )

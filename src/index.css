@@ -70,3 +70,26 @@ code {
   background-color: transparent !important;
   color: #000 !important;
 }
+.Date{
+  font-family: "IRANYekan" !important;
+  border-color: #E5E0EB;
+  border-style:solid;
+  border-width:1px;
+  border-radius:5px;
+  font-size: 18px;
+  text-align: center;
+  height: 36px;
+  width: 300px;
+}
+
+.Time{
+  font-family: "IRANYekan" !important;
+  border-color: #E5E0EB;
+  border-style:solid;
+  border-width:1px;
+  border-radius:5px;
+  font-size: 18px;
+  text-align: center;
+  height: 36px;
+  width: 200px;
+}

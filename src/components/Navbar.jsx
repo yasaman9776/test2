@@ -145,7 +145,7 @@ const Navbar = () =>{
                     </NavLink>
         </li>
         <li style={{marginRight:15,marginLeft:15,textDecoration:"none"}}>
-                    <NavLink to={"/allDatePickers"}
+                    <NavLink to={"/timeDatePickerCalendar"}
                        style={({isActive, isTransitioning}) => {
                         return {
                             fontWeight: isActive
@@ -160,7 +160,7 @@ const Navbar = () =>{
                                 textDecoration:'none'
                         };
                     }}>
-                         All DatePickers
+                         TimeDatePickerCalendar
                     </NavLink>
         </li>
         <li style={{marginRight:15,marginLeft:15,textDecoration:"none"}}>

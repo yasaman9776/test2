@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import MainLayout from "../layout/MainLayout";
-import { AllDatePickers,AllBadges,AllButtons,AllDifferentInputType,AllDropDown,AllInputs,AllProgressBars,AllTypographys,AllUploadType,AllToasts } from "../pages";
+import { TimeDatePickerCalendar,AllBadges,AllButtons,AllDifferentInputType,AllDropDown,AllInputs,AllProgressBars,AllTypographys,AllUploadType,AllToasts } from "../pages";
 
 export const router =createBrowserRouter([
     {
@@ -53,8 +53,8 @@ export const router =createBrowserRouter([
 
             },
             {
-                path:"/allDatePickers",
-                element: <AllDatePickers/>,
+                path:"/timeDatePickerCalendar",
+                element: <TimeDatePickerCalendar/>,
 
             },
             

@@ -9,6 +9,11 @@ export const DefaultSelect = styled.select`
         border-radius:${BorderRadius.xs};
         font-family:"IRANYekanBold";
         direction:${(props)=> props.dir};
+        width:${(props) =>props.width};
+        width: 300px;
+        height:${(props) =>props.height};
+        height: 40px;
+        font-size:16px;
         
         padding:${(props) => props.customPadding};
         
@@ -16,12 +21,7 @@ export const DefaultSelect = styled.select`
         * & :hover{
         background-color: ${(props) => props.backgroundHoverColor};
         },
-        & :hover{
-            background-color: ${(props) => props.backgroundHoverColor};
-        },
-        option :hover{
-            background-color:#ffb921;
-        }
+     
 `
 
 export const DefaultOption = styled.option`

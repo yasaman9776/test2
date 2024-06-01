@@ -145,6 +145,25 @@ const Navbar = () =>{
                     </NavLink>
         </li>
         <li style={{marginRight:15,marginLeft:15,textDecoration:"none"}}>
+                    <NavLink to={"/allDatePickers"}
+                       style={({isActive, isTransitioning}) => {
+                        return {
+                            fontWeight: isActive
+                                ? "bold"
+                                : "bold",
+                            color: isActive
+                                ? "#2a4270"
+                                : "#000",
+                            viewTransitionName: isTransitioning
+                                ? "slide"
+                                : "",
+                                textDecoration:'none'
+                        };
+                    }}>
+                         All DatePickers
+                    </NavLink>
+        </li>
+        <li style={{marginRight:15,marginLeft:15,textDecoration:"none"}}>
                     <NavLink to={"/allBadges"}
                        style={({isActive, isTransitioning}) => {
                         return {

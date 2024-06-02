@@ -13,6 +13,7 @@ const TimeDatePickerCalendar = ({props}) => {
    
     <div style={{
         display: "flex",
+        flexWrap: "wrap",
         flexDirection: "row-reverse",
         
         
@@ -20,7 +21,7 @@ const TimeDatePickerCalendar = ({props}) => {
     
     <div style={{
         direction: "rtl",
-        marginRight: "150px",
+        marginRight: "155px",
         marginTop: "50px",
         
     }}>
@@ -36,7 +37,7 @@ const TimeDatePickerCalendar = ({props}) => {
     </div>
     <div style={{
         direction: "rtl",
-        marginRight: "150px",
+        marginRight: "155px",
         marginTop: "50px",
         
     }}>
@@ -45,14 +46,14 @@ const TimeDatePickerCalendar = ({props}) => {
         
     }}><DefaultTypography>انتخاب بازه زمانی  :</DefaultTypography></div>
     <DatePicker 
-    inputClass="Date"
+    inputClass="DateRange"
     direction="ltr"
     position="center"
     onChange={(e) => console.log(e.value)} range />
     </div>
     <div style={{
         direction: "rtl",
-        marginRight: "150px",
+        marginRight: "155px",
         marginTop: "50px",
         
     }}>
@@ -70,7 +71,7 @@ const TimeDatePickerCalendar = ({props}) => {
     </div>
     <div style={{
         direction: "rtl",
-        marginRight: "200px",
+        marginRight: "155px",
         marginTop: "50px",
         
     }}>
@@ -80,6 +81,7 @@ const TimeDatePickerCalendar = ({props}) => {
     }}><DefaultTypography>تقویم</DefaultTypography></div>
     <CalendarProvider>
       <Calendar
+        inputClass="Calendar"
         defaultValue={calendarValue}
         onChange={(e) => setCalendarValue(new Date(e.value))}
       />
